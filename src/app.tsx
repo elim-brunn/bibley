@@ -1,6 +1,12 @@
 import React from 'react';
 import './app.scss';
+import SW from '@/sw';
 
 export default function App() {
-	return <div>Hello World awdawd </div>;
+	return (
+		<>
+			<SW />
+			<div>HELLO</div>
+		</>
+	);
 }
