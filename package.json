@@ -17,15 +17,27 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.8.5",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.25.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "npm": "^8.19.2",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
     "sass": "^1.55.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
-    "husky": "^8.0.0"
+    "vite-plugin-pwa": "^0.13.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "pretty-quick --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --max-warnings=0"
+    ]
   }
 }
